@@ -1,0 +1,56 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #f8fafc;
+    --accent-color: #38bdf8;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0;
+}
+
+#projeler {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.proje-karti {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 20px;
+    width: 320px;
+    border: 1px solid #334155;
+}
+
+/* GÖRSEL AYARLARI: Tam görünmesi ve kesilmemesi için */
+.proje-karti img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* Görseli kesmez, içine sığdırır */
+    background-color: #1e293b; /* Kutu ile aynı renk, boşluklar kaybolur */
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+h3 { margin-bottom: 10px; }
+
+.indir-butonu {
+    display: block;
+    padding: 12px;
+    background: var(--accent-color);
+    color: #0f172a;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.indir-butonu:hover { background: #fff; }
