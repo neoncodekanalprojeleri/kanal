@@ -10,27 +10,64 @@
 <body>
 
     <header>
-        <h1>Projelerim</h1>
+        <h1>Yazılım Portfolyom</h1>
     </header>
 
     <section id="projeler">
         <div class="proje-karti">
-            <img src="minecraft.jpg" alt="Minecraft Modu">
-            <h3>CraftMine</h3>
-            <p>CraftMine Minecraft Gibi Ama Daha İyi</p>
-            <a href="CraftMine.zip" download class="indir-butonu">CraftMine İndir</a>
+            <img src="minecraft.jpg" alt="CraftMine">
+            <h3>CraftMine (Oyun)</h3>
+            <p>Kendi geliştirdiğim Minecraft benzeri voxel oyun.</p>
+            <button onclick="tanitimiAc()" class="indir-butonu">Detayları Gör ve İndir</button>
         </div>
 
         <div class="proje-karti">
-            <img src="antiwall.jpg" alt="Antiwall Modu">
-            <h3>Antiwall Security Mod</h3>
-            <p>AntiWall Virüsleri Bulur ve Virüslerden Korur</p>
-            <a href="https://www.mediafire.com/file/09jms7uh2er7typ/AntiWall.rar/file" target="_blank" class="indir-butonu">Antiwall Dosyasını İndir</a>
+            <img src="antiwall.jpg" alt="Antiwall">
+            <h3>Antiwall Security</h3>
+            <p>Oyun güvenliği için geliştirilmiş özel yazılım.</p>
+            <a href="https://www.mediafire.com/file/09jms7uh2er7typ/AntiWall.rar/file" target="_blank" class="indir-butonu">Hızlı İndir</a>
         </div>
     </section>
 
+    <div id="tanitimEkrani" class="modal">
+        <div class="modal-icerik">
+            <span class="kapat" onclick="tanitimiKapat()">&times;</span>
+            <img src="minecraft.jpg" alt="CraftMine" class="tanitim-gorsel">
+            <h2>CraftMine Projesi</h2>
+            <p>CraftMine, temelden JavaScript/HTML kullanılarak geliştirilmiş, blok kırma ve yerleştirme mantığına dayanan bir hayatta kalma oyunudur.</p>
+            
+            <div class="ozellik-listesi">
+                <h3>Oyun Özellikleri:</h3>
+                <ul>
+                    <li>🧱 Sınırsız Blok Dünyası</li>
+                    <li>🛠️ Envanter ve Crafting Sistemi</li>
+                    <li>🧊 Optimize Edilmiş Voxel Motoru</li>
+                    <li>💾 Kayıt Etme Özelliği</li>
+                </ul>
+            </div>
+
+            <div class="indirme-alani">
+                <p>Hazırsan oynamaya başla!</p>
+                <a href="minecraft.zip" download class="indir-butonu">CraftMine İndir (v1.0)</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function tanitimiAc() {
+            document.getElementById("tanitimEkrani").style.display = "block";
+        }
+        function tanitimiKapat() {
+            document.getElementById("tanitimEkrani").style.display = "none";
+        }
+        // Boşluğa basınca kapatma
+        window.onclick = function(event) {
+            let modal = document.getElementById("tanitimEkrani");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
 </html>
-
-
-
